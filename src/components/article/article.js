@@ -226,10 +226,10 @@ class Articles extends Component {
   }
 
   componentWillUnmount() {
-    document.title = '小明 的博客网站';
+    document.title = '小明的博客网站';
     document
       .getElementById('keywords')
-      .setAttribute('content', '小明 的博客网站');
+      .setAttribute('content', '小明的博客网站');
     document
       .getElementById('description')
       .setAttribute(
