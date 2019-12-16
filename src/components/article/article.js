@@ -27,7 +27,7 @@ class Articles extends Component {
       type: 1, //文章类型 => 1: 普通文章，2: 简历，3: 管理员介绍
       articleDetail: {
         _id: '',
-        author: '夜尽天明',
+        author: '小明',
         category: [],
         comments: [],
         create_time: '',
@@ -226,10 +226,10 @@ class Articles extends Component {
   }
 
   componentWillUnmount() {
-    document.title = '夜尽天明 的博客网站';
+    document.title = '小明 的博客网站';
     document
       .getElementById('keywords')
-      .setAttribute('content', '夜尽天明 的博客网站');
+      .setAttribute('content', '小明 的博客网站');
     document
       .getElementById('description')
       .setAttribute(
