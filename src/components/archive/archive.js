@@ -73,7 +73,7 @@ class Archive extends Component {
         color={"red"}
         dot={<Icon type="clock-circle-o" style={{ fontSize: "16px" }} />}
       >
-        <h1> {item.year} </h1>{" "}
+        <h1> {item.year} </h1>
         {item.list.map(ele => {
           return (
             <Timeline key={ele._id}>
@@ -83,27 +83,29 @@ class Archive extends Component {
                   target="_blank"
                   to={`/articleDetail?article_id=${ele._id}`}
                 >
-                  <h3> {ele.title} </h3>{" "}
-                </Link>{" "}
+                  <h3> {ele.title} </h3>
+                </Link>
                 <p>
                   <span>
                     {" "}
                     {ele.create_time
                       ? timestampToTime(ele.create_time, true)
-                      : ""}{" "}
-                  </span>{" "}
-                </p>{" "}
-              </Timeline.Item>{" "}
+                      : ""}
+                  </span>
+                </p>
+              </Timeline.Item>
             </Timeline>
           );
-        })}{" "}
+        })}
       </Timeline.Item>
     ));
 
     return (
       <div className="archive">
-        <Timeline> {list} </Timeline>{" "}
-        {this.state.isLoading ? <LoadingCom /> : ""}{" "}
+        <Timeline> 
+          {list} 
+        </Timeline>
+        {this.state.isLoading ? <LoadingCom /> : ""}
       </div>
     );
   }
